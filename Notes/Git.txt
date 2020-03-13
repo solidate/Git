@@ -1,0 +1,197 @@
+Some fundamental git commands:
+
+> pwd
+The present working directory
+
+> ls
+List files and directories
+  l – List files and directories in Long Listing Format.
+  a – To check hidden files and directories.
+  i – To check Inode Informations.
+  n – List UID and GID number of Owner and Groups to which the files and directories are belongs.
+  g – List group of files and directories to which they belongs.
+  G – List users and not groups of files and directories to which they belongs.
+  h – List the size of the files and directories in Human Readable format.
+
+> mkdir "directory name"
+Create a new directory
+
+>git init demo[project-name]
+Initiate an empty git repository within the project folder
+
+>git status
+Check status of what's going on in a Git repository.
+
+>demo $ mate README.md
+Create a markdown file README with mate text editor
+
+>git add README.md
+Moves the README file from simply being on our working directory, unconcerned
+with Git, into Git's staging area.
+
+>demo $ git commit -m 'First commit'
+Commit the changes with commit message
+
+>rm -rf .git
+Forcefully and recursively delete .git folder.
+The directory will no longer be managed by Git.
+
+>git add .
+Add all the files from working directory to staging area.
+
+>git status
+
+>git commit
+Add commit message using default core editor.
+
+>git log
+Shows our listing of commits.
+
+>git Show
+It will show the last commit and a diff containing all the changes.
+To get out of show command Press 'q'.
+
+>mate README.md
+add changes
+
+>git status
+
+>git ls-Files
+List files and folders being tracked by Git.
+
+>git commit -a
+-a parameter tells git to first add modified files to the Git staging area,
+then directly proceed to committing.
+
+>git reset HEAD README.md
+Unstage the file from staging Area.
+
+>git checkout --README.md
+last known good commit to the files
+
+>git help log
+options available
+
+>git log --oneline --graph --decorate --all
+
+>git config --global alias.hist "log --oneline --graph --decorate --all"
+Create a alias for git commands
+
+>git config --global --list
+list git config enteries
+
+>git hist
+Using alias command
+
+>git mv example.txt demo.txt
+Rename files using Git
+
+>git rm demo.txt
+staging the deletion of files and folders
+
+>git  add -u
+making git aware of changes to untracked Files
+
+>git add -A
+To include both additions and deletions in git staging area.
+
+>git diff
+Get a difference between what's recently changed in the working directory vs
+the HEAD position in the Git repository.
+
+>git difftool
+Get a difference between what's recently changed in the working directory vs
+the HEAD position in the Git repository using the default difftool.
+
+>git help diff
+
+>git branch
+list branches
+
+>git checkout -b [branch name]
+for creating the branch and switching to it
+
+>git add .
+add the changes to staging area
+
+>git commit -m
+
+>git diff updates Master
+diff command will allow us to pass in the names of name so the branches instead
+of commit IDs
+
+>git checkout Master
+to switch branch we sue checkout command
+
+>git hist
+
+>git merge updates
+merge the updates branch's changes to the current branch causing a fast forward
+merge
+
+>git branch -d updates
+delete the branch once no longer needed. Note: History is not deleted
+
+>git checkout -b very-bad
+
+>git branch -a
+
+>git commit -am "very bad update"
+
+>git checkout Master
+
+>git merge very-bad
+A conflict if occurred puts us in a merging states
+
+
+>git mergetool
+launches the mergetool to compare the conflicts
+
+>git commit -m 'Resolved conflict'
+
+>git status
+we can see a .orig file that is untracked. we don't want it
+
+>mate .gitignore
+add README.md.orig to gitignore
+
+>git tag mytag
+create a lightweight tag 'mytag'
+
+>git tag --list
+list all the tags
+
+>git hist
+
+>git tag -d mytag
+Delete tags
+
+>git tag -a v1.0 -m 'Release v1.0'
+
+>git tag --list
+
+>git show v1.0
+
+>git stash
+give information about last commit on the current branch
+
+>git stash list
+shows us our stashes
+
+>git stash pop
+two actions at once. 'apply' and then 'drop'
+
+>git reset c2445614 --soft
+Simply changes the commit id the HEAD is pointing to
+
+>git reset 634e54s54 --mixed
+Its the default reset
+
+>git rest 34589237njf --Hard
+Hard reset
+
+>git reflog
+shows all the actions taken in repository
+
+>git reset --hard [id]
+get back the history

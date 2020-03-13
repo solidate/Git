@@ -1,0 +1,103 @@
+Q. What is Git?
+A. Git is decentralized and distributed version control system.
+It can be centralized as well. Because of the distributed nature,
+git can scale massively. Most operations are off local. Only few needs network.
+Since most operations are local, Its very fast for the same operations.
+
+Q. What is Repository?
+A. Within Git, the collection of version controlled files being managed with
+their history, is considered the Repository.
+
+While we typically consider the collection of files and folders being managed
+as the Repository, actually, the encompassing folder on the file system is
+considered the working directory or workspace.
+
+The workspace can contain both files managed by git and other files and folders
+being excluded from version control, or not yet managed by Git.
+
+Normally, within the root folder of the workspace for your project, there will
+be a '.git' folder that contains the actual Git repository: the '.git' folder
+contains it's own collection of files and folders that make up the internal
+structure of the repository.
+
+Q. how Git works?
+A. Git works by saving the current state of all its files it manages into
+snapshots called commits; a commit can contain one or many file changes.
+Git versions files, not folders.
+Occasionally, we might need to work with a technology that requires certain
+folders to exist, regardless of if there are any files there;
+if you need to, we can create empty dummy files to force Git to preserve the
+folder. As you make changes, commits are saved onto the timeline, known as a
+"branch". A Git repository will normally have at least one branch, and, by
+default, that branch is called Master; additional branches can be created.
+
+Q. what is GitHub?
+A. GitHub is a Git repository hosting service provided by GitHub Inc.
+It also provides an on-premises hosting service solution called GitHub
+enterprise. Bitbucket and GitLab are some of its competitors.
+
+Q. What are the three local states related to files being managed by Git.
+A. Three stages are:
+    I. Working directory- all files and folders may or may not be managed by git
+    II. Staging Area - used to prepare for the next commit. Files are moved from
+         the modified working directory state to the Git staging area, and then
+         finally committed into the Git repository.
+    III. Git repository or commit history(.git folder). - which contains all the
+          committed or saved changes to the Git repository
+    IV. Remote -  another repository with its own three states internally...
+
+
+Q. How to exclude certain files and folders we don't want in our git repository?
+A. We can create a .gitignore file in the working directory
+This files contains the meta information of files and folders to be ignored.
+
+Q. What is Branch?
+A. A branch is the timeline of commits. More accurately, branches are the names
+or labels we give timelines in Git. We can create and delete branches without
+affecting timelines. Default branch is master branch.
+
+Q. What is a branch merge?
+A. we can create a new branch to do a bit of work, and then rejoin the master
+branch by merging in any changes that occurred on the new branch. While merging,
+Git tries it's best to automatically merge when possible.
+
+Q. Types of merge?
+A. 1. Fast forward merge - this happens in the simplest of cases when no
+    additional work has been detected on the parent branch,(master in default
+    case). Git will simply apply all commits from the other branch directly onto
+    the parent branch. We can disable the fast forward merges if undesired.
+
+   2. automatic merge - happens when non-conflicting changes in the parent
+   branch. Fit is able to automatically resolve any conflicts. in doing so, the
+   old branch's timeline is preserved, and a new merge commit is created to show
+   the merging of the two branches.
+
+   3. Manual merge- this happens when Git is unable to automatically resolve
+   any conflicts. Git enters a special conflicting merge state, which means
+   that all merge conflicts must be resolved prior to moving forward with a
+   commit. once all the conflicts have been resolved, those changes are saved
+    as a merge commit.
+
+Q. What are Special markers?
+A. In addition to branches, tags, and other labels for commits. Git has special
+markers or pointers. One popular marker is called HEAD. HEAD is normally the
+last commit of the current branch. That means that, as we switch branches, the
+location of HEAD moves to match the last commit location of that branch. While
+this is generally true, it is also possible to manually move the head location
+someplace other than the last commit.
+
+Q. What are tags?
+A. To mark a point in the repository with some type of milestone, we use tags.
+Two types of tags are there:
+1. lightweight stages
+2. Annotated tags
+
+Q. What is stashing?
+A. Git stashing ability allows us to save WIP by push change from one branch to a new branch.
+
+Q. How to do the time travel?
+A. Use reset and reflog
+Three are three ways to present
+1. Soft reset
+2. Default
+3. Hard

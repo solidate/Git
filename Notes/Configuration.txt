@@ -1,0 +1,28 @@
+1. Open git bash and type:
+>git config --global user.name "Your Name"
+>git config --global user.email "your@email.com"
+
+2.Custom short cut command for Core editor like notepad++:
+>notepad++ ~/.bash_profile
+
+  I. Add new line to .bash_profile:
+  >alias npp='notepad++ -multiInst -nosession'
+
+3.Restart git bash.
+
+4. In git Bash:
+> git config --global core.editor "notepad++ -multiInst -nosession"
+
+5.Verify:
+>git config --global -e
+
+if Notepad++ open the config file. we're done.
+
+6. P4merge as Diff tool
+  I. In git bash:
+  >git config --global diff.tool p4merge
+  >git config --global difftool.p4merge.path "C:/Programs/Perforce/p4merge.exe"
+  >git config --global difftool.prompt false
+  >git config --global merge.tool p4merge
+  >git config --global mergetool.p4merge.path "C:/Programs/Perforce/p4merge.exe"
+  >git config --global mergetool.prompt false
