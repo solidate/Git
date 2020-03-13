@@ -101,3 +101,4 @@ Three are three ways to present
 1. Soft reset
 2. Default
 3. Hard
+.
