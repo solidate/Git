@@ -47,7 +47,7 @@ Add commit message using default core editor.
 >git log
 Shows our listing of commits.
 
->git Show
+>git Shows
 It will show the last commit and a diff containing all the changes.
 To get out of show command Press 'q'.
 
@@ -195,3 +195,19 @@ shows all the actions taken in repository
 
 >git reset --hard [id]
 get back the history
+
+>git remote -v
+manages all the remote connections from the current local repository to a remote
+
+>git remote add origin [repository link]
+establish a connection to the GitHub repository and binds it to local
+
+>git push -u origin master --tags
+setup a tracking branch relationship between the master branch on the local
+repository and the master branch on the remote repository preserving all the
+tags
+
+>git fetch
+Pull can be a destructive command if we have changes that are not compatible
+with what's currently on GitHub. To avoid this we use fetch. Fetch is non
+destructive.

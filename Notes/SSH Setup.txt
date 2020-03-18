@@ -1,0 +1,23 @@
+The first step we need to do in order to communicate via SSH with GitHub
+is to create our SSH key on our local system.
+
+>mkdir .ssh
+>cd .ssh
+>ssh-keygen -t rsa -C "Email@web"
+
+Carefully review this line, then press enter.
+
+You'll be prompted where to save this file, press enter to accept the default.
+Enter a passphrase, or press enter to have no passphrase.
+Once you've verified your passphrase again, press enter
+
+>ls-al
+
+
+You should have an "id_rsa" file, and also an "id_rsa.pub" file.
+
+>npp id_rsa.pub
+
+Copy the content and add this public key on GitHub
+
+>ssh -T git@GitHub.com

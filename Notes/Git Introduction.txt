@@ -101,4 +101,10 @@ Three are three ways to present
 1. Soft reset
 2. Default
 3. Hard
-.
+
+Q. Differentiate Fetch and Pull.
+A. Pull  is a two command in one i.e. fetch and a merge. It pulls the changes
+from the remote repository and merge it to the current repository.
+
+pull can be a destructive command if we have changes that are not compatible
+with what's currently on Github. To avoid this we use fetch.
